@@ -13,37 +13,52 @@ on:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
 
     permissions:
       contents: write
 
     steps:
-    
-      - name: Generate snake SVGs
+   
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+  
+      - name: Generate snake
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
+
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-     
-      - name: Download GitHub Stats Cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+   
+      - name: Generate GitHub Stats
         run: |
           mkdir -p dist
 
-          curl -sLo dist/github-stats.svg \
-          "https://github-stats-extended.vercel.app/api?username=${{ github.repository_owner }}&show_icons=true&theme=radical&count_private=true"
+          curl -fLsS \
+          -o dist/github-stats.svg \
+          "https://github-stats-extended.vercel.app/api?username=${{ github.repository_owner }}&show_icons=true&theme=radical"
 
-          curl -sLo dist/github-top-langs.svg \
+          curl -fLsS \
+          -o dist/github-top-langs.svg \
           "https://github-stats-extended.vercel.app/api/top-langs/?username=${{ github.repository_owner }}&layout=compact&theme=radical"
 
-          curl -sLo dist/github-streak.svg \
-          "https://streak-stats.demolab.com/?user=${{ github.repository_owner }}&theme=radical"
-
     
-      - name: Publish generated SVGs
+      - name: Generate GitHub Streak
+        uses: DenverCoder1/github-readme-streak-stats@main
+        with:
+          options: user=${{ github.repository_owner }}&theme=radical
+          path: dist/github-streak.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+     
+      - name: Publish SVG files
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
