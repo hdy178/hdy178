@@ -14,6 +14,49 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+### 📈 Stats:
+
+<div align="center">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td>
+      <a href="https://github.com/hdy178">
+        <img
+          src="https://raw.githubusercontent.com/hdy178/hdy178/output/github-stats.svg"
+          alt="GitHub Stats"
+          height="195"
+        />
+      </a>
+    </td>
+
+    <td>
+      <a href="https://github.com/hdy178">
+        <img
+          src="https://raw.githubusercontent.com/hdy178/hdy178/output/github-streak.svg"
+          alt="GitHub Streak"
+          height="195"
+        />
+      </a>
+    </td>
+  </tr>
+
+  <tr valign="top">
+    <td colspan="2" align="center">
+      <br/>
+
+      <a href="https://github.com/hdy178">
+        <img
+          src="https://raw.githubusercontent.com/hdy178/hdy178/output/github-top-langs.svg"
+          alt="Top Languages"
+          height="165"
+        />
+      </a>
+    </td>
+  </tr>
+</table>
+
+</div>
 <p align="center">
   <picture>
     <source
