@@ -18,9 +18,9 @@ Here are some ideas to get you started:
 
 <div align="center">
 
-<table align="center" border="0" cellpadding="0" cellspacing="0">
-  <tr valign="top">
-    <td>
+<table>
+  <tr>
+    <td align="center">
       <a href="https://github.com/hdy178">
         <img
           src="https://raw.githubusercontent.com/hdy178/hdy178/output/github-stats.svg"
@@ -30,7 +30,7 @@ Here are some ideas to get you started:
       </a>
     </td>
 
-    <td>
+    <td align="center">
       <a href="https://github.com/hdy178">
         <img
           src="https://raw.githubusercontent.com/hdy178/hdy178/output/github-streak.svg"
@@ -41,10 +41,8 @@ Here are some ideas to get you started:
     </td>
   </tr>
 
-  <tr valign="top">
+  <tr>
     <td colspan="2" align="center">
-      <br/>
-
       <a href="https://github.com/hdy178">
         <img
           src="https://raw.githubusercontent.com/hdy178/hdy178/output/github-top-langs.svg"
